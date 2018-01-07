@@ -1,0 +1,10 @@
+package com.tu.lunchy.dao.objects;
+
+public class Order {
+
+	private int orderId;	
+	private int userId;
+	private int menuId;
+	private int mealId;
+	
+}

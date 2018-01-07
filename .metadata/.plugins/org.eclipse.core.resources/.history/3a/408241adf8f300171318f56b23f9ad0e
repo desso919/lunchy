@@ -1,0 +1,37 @@
+package com.tu.lunchy.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.tu.lunchy.dao.objects.Menu;
+import com.tu.lunchy.dao.objects.Order;
+import com.tu.lunchy.database.DatabaseConnection;
+
+public class OrderDaoImpl {
+
+	public List<Order> getAllOrders() throws SQLException {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Order> allOrders = new ArrayList<Order>();
+
+		String selectQuery = "select * from orders";
+
+		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		if(resultSet.next()) {
+			int orderId = resultSet.getInt("order_id");
+			int userId = resultSet.getInt("user_id");
+			int menuId = resultSet.getInt("menu_id");
+			int mealId = resultSet.getInt("meal_id");
+			String orderStatus = resultSet.getInt("order_status");
+	
+		}
+		
+		return menu;
+	}
+	
+}

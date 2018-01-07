@@ -1,0 +1,23 @@
+package com.tu.lunchy.database;
+
+import java.sql.SQLException;
+
+import com.tu.lunchy.dao.impl.UserDaoImpl;
+import com.tu.lunchy.dao.objects.User;
+
+public class Test {
+	
+
+	public static void main(String[] args) throws SQLException {
+		MealDaoImpl us = new MealDaoImpl();
+		
+		//User user = us.getUser("dimana", "dimana");
+		
+		User user = new User("dido", "dido", 3);
+		us.addUser(user);
+		
+		User user2 = us.getUser("dido", "dido");
+		System.out.println(user2);
+	}
+
+}

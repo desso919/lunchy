@@ -30,3 +30,5 @@ INSERT INTO `lunchy_db`.`menus` (`menu_name`, `meal_id`) VALUES ('Meat Menu', 2)
 -- INSERT INTO orders TABLE
 INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`) VALUES (3 , 1, 2);
 INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`) VALUES (2 , 2, 1);
+INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`,`order_status`) VALUES (3 , 1, 2, "COOKING");
+INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`,`order_status`) VALUES (2 , 2, 1, "READY");

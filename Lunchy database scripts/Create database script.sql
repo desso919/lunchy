@@ -60,6 +60,33 @@ CREATE TABLE `lunchy_db`.`menus` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 	
+-- ALTER menus TABLE 
+	ALTER TABLE `lunchy_db`.`menus` 
+DROP FOREIGN KEY `menu_meal_id_fk`;
+ALTER TABLE `lunchy_db`.`menus` 
+DROP COLUMN `meal_id`,
+DROP INDEX `menu_meal_id_fk_idx` ;
+
+	
+-- CREATE menu_meals TABLE
+	CREATE TABLE `lunchy_db`.`menu_meals` (
+  `menu_meals_id` INT NOT NULL AUTO_INCREMENT,
+  `menu_id` INT NOT NULL,
+  `meal_id` INT NOT NULL,
+  PRIMARY KEY (`menu_meals_id`),
+  INDEX `menu_meals_menu_id_fk_idx` (`menu_id` ASC),
+  INDEX `menu_meals_meal_id_fk_idx` (`meal_id` ASC),
+  CONSTRAINT `menu_meals_menu_id_fk`
+    FOREIGN KEY (`menu_id`)
+    REFERENCES `lunchy_db`.`menus` (`menu_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `menu_meals_meal_id_fk`
+    FOREIGN KEY (`meal_id`)
+    REFERENCES `lunchy_db`.`meals` (`meal_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+	
 -- CREATE orders TABLE
 	CREATE TABLE `lunchy_db`.`orders` (
   `order_id` INT NOT NULL AUTO_INCREMENT,
@@ -85,7 +112,14 @@ CREATE TABLE `lunchy_db`.`menus` (
     REFERENCES `lunchy_db`.`meals` (`meal_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+	
+	
+-- ALTER orders TABLE 
+	ALTER TABLE `lunchy_db`.`orders` 
+ADD COLUMN `order_status` VARCHAR(100) NOT NULL AFTER `meal_id`;
 
+
+	
 
 
 

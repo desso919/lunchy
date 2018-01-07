@@ -1,0 +1,12 @@
+package com.tu.lunchy.dao.objects;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Menu {
+	
+	private String menuName;
+	private List<MenuItem> mealsForThisMenu = new ArrayList<MenuItem>();
+
+	
+}

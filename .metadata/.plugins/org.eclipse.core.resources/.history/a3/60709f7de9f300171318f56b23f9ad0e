@@ -1,0 +1,12 @@
+package com.tu.lunchy.database;
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		UserDaoImpl us = new UserDaoImpl();
+		
+		System.out.println();
+	}
+
+}

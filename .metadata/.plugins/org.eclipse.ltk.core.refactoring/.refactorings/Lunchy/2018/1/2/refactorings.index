@@ -1,0 +1,8 @@
+1515356749129	Rename field 'accountType'
+1515356763318	Rename field 'accountTypeid'
+1515356952036	Rename type 'UserDaoImp'
+1515359737207	Rename local variable 'user'
+1515359842114	Rename local variable 'user'
+1515360666444	Rename type 'Menu'
+1515361194847	Rename type 'MenuDao'
+1515361252145	Rename local variable 'meal'

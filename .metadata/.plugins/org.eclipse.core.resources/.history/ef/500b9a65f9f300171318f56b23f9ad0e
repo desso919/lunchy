@@ -1,0 +1,60 @@
+package com.tu.lunchy.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.tu.lunchy.dao.objects.Menu;
+import com.tu.lunchy.dao.objects.Order;
+import com.tu.lunchy.database.DatabaseConnection;
+
+public class OrderDaoImpl {
+
+	public List<Order> getAllOrders() throws SQLException {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Order> allOrders = new ArrayList<Order>();
+
+		String selectQuery = "select * from orders";
+
+		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		if (resultSet.next()) {
+			int orderId = resultSet.getInt("order_id");
+			int userId = resultSet.getInt("user_id");
+			int menuId = resultSet.getInt("menu_id");
+			int mealId = resultSet.getInt("meal_id");
+			String orderStatus = resultSet.getString("order_status");
+
+			allOrders.add(new Order(orderId, userId, menuId, mealId, orderStatus));
+		}
+
+		return allOrders;
+	}
+
+	public boolean addOrder(Order order) throws SQLException {
+		Connection connection = DatabaseConnection.getConnection();
+
+		String selectQuery = "INSERT INTO orders (user_id, menu_id, meal_id, order_status) VALUES (?, ?, ?, ?)";
+
+		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		preparedStatement.setInt(1, order.getUserId());
+		preparedStatement.setInt(2, order.getMenuId());
+		preparedStatement.setInt(3, order.getMealId());
+		preparedStatement.setString(2, order.getOrderStatus());
+
+		int result = preparedStatement.executeUpdate();
+
+		if (result > 0) {
+			return true;
+		}
+
+		return false;
+	}
+
+}

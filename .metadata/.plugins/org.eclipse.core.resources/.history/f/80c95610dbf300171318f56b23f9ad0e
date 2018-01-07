@@ -1,0 +1,5 @@
+package com.tu.lunchy.database;
+
+public class DatabaseConnection {
+
+}

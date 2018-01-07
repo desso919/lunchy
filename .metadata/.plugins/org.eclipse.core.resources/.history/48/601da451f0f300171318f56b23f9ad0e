@@ -1,0 +1,55 @@
+package com.tu.lunchy.dao.impl;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.tu.lunchy.dao.objects.Meal;
+import com.tu.lunchy.dao.objects.User;
+import com.tu.lunchy.database.DatabaseConnection;
+
+public class MealDaoImpl {
+
+	public Meal getMeal(int mealId) throws SQLException {
+		Connection connection = DatabaseConnection.getConnection();
+		Meal meal = null;
+
+		String selectQuery = "select * from meals where meal_id = ?";
+
+		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+		preparedStatement.setInt(1, mealId);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		while (resultSet.next()) {
+			String mealName = resultSet.getString("meal_name");
+			String description = resultSet.getString("description");
+			String ingredients = resultSet.getString("ingredients");
+			BigDecimal price = resultSet.getBigDecimal("price");
+
+			meal = new Meal(mealId, mealName, description, ingredients, price.longValueExact());
+		}
+
+		return meal;
+	}
+	
+	public boolean addMeal(Meal meal) throws SQLException {
+		Connection connection = DatabaseConnection.getConnection();
+
+		String sqlQuery = "INSERT INTO meals (meal_name, description, ingredients,price ) VALUES (?, ?, ?, ?)";
+
+		PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+		preparedStatement.setString(1, meal.getUsername());
+		preparedStatement.setString(2, meal.getPassword());;
+		preparedStatement.setInt(3, meal.getAccountType());
+		int result = preparedStatement.executeUpdate();
+
+		if(result > 0) {
+			return true;
+		}
+
+		return false;
+	}
+	
+}

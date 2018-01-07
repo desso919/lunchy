@@ -1,0 +1,64 @@
+package com.tu.lunchy.dao.objects;
+
+public class Order {
+
+	private int orderId;
+	private int userId;
+	private int menuId;
+	private int mealId;
+	private String orderStatus;
+
+	public Order() {
+	}
+
+	public Order(int userId, int menuId, int mealId) {
+		this.userId = userId;
+		this.menuId = menuId;
+		this.mealId = mealId;
+	}
+
+	public Order(int orderId, int userId, int menuId, int mealId) {
+		this.orderId = orderId;
+		this.userId = userId;
+		this.menuId = menuId;
+		this.mealId = mealId;
+	}
+
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getMenuId() {
+		return menuId;
+	}
+
+	public void setMenuId(int menuId) {
+		this.menuId = menuId;
+	}
+
+	public int getMealId() {
+		return mealId;
+	}
+
+	public void setMealId(int mealId) {
+		this.mealId = mealId;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", userId=" + userId + ", menuId=" + menuId + ", mealId=" + mealId + "]";
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.tu.lunchy.dao.objects;
+
+public class Menu {
+	
+	private int menuId;
+	private int mealId;
+	private String menuName;
+
+}

@@ -1,0 +1,5 @@
+package com.tu.lunchy.dao.objects;
+
+public class Menu {
+
+}
