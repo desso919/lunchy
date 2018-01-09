@@ -118,6 +118,12 @@ DROP INDEX `menu_meal_id_fk_idx` ;
 	ALTER TABLE `lunchy_db`.`orders` 
 ADD COLUMN `order_status` VARCHAR(100) NOT NULL AFTER `meal_id`;
 
+-- ALTER orders TABLE 
+ALTER TABLE `lunchy_db`.`orders` 
+ADD COLUMN `is_oredred_for_office` TINYINT(1) NOT NULL DEFAULT 0 AFTER `order_status`,
+ADD COLUMN `order_time` DATETIME NOT NULL AFTER `is_oredred_for_office`,
+ADD COLUMN `order_for_time` DATETIME NOT NULL AFTER `order_time`;
+
 
 	
 

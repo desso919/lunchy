@@ -28,7 +28,10 @@ INSERT INTO `lunchy_db`.`menus` (`menu_name`, `meal_id`) VALUES ('Meat Menu', 2)
 
 
 -- INSERT INTO orders TABLE
-INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`) VALUES (3 , 1, 2);
-INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`) VALUES (2 , 2, 1);
 INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`,`order_status`) VALUES (3 , 1, 2, "COOKING");
 INSERT INTO `lunchy_db`.`orders` (`user_id`, `menu_id`,`meal_id`,`order_status`) VALUES (2 , 2, 1, "READY");
+
+-- UPDATE DATE IN orders TABLE
+UPDATE `lunchy_db`.`orders` SET `order_time`='2017-01-19 12:14:07', `order_for_time`='2017-01-19 13:15:00' WHERE `order_id`='1';
+UPDATE `lunchy_db`.`orders` SET `order_time`='2017-01-19 13:30:00', `order_for_time`='2017-01-19 14:30:00' WHERE `order_id`='2';
+UPDATE `lunchy_db`.`orders` SET `is_oredred_for_office`='1' WHERE `order_id`='2';

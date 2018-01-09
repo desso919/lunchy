@@ -6,3 +6,7 @@
 1515360666444	Rename type 'Menu'
 1515361194847	Rename type 'MenuDao'
 1515361252145	Rename local variable 'meal'
+1515503520416	Extract constant 'ORDER_STATUS_ACCEPTED'
+1515503793370	Rename method 'boolToInt'
+1515504024498	Rename local variable 'b'
+1515504035149	Rename local variable 'b'
