@@ -10,3 +10,8 @@
 1515503793370	Rename method 'boolToInt'
 1515504024498	Rename local variable 'b'
 1515504035149	Rename local variable 'b'
+1515614505506	Move 'index.html' to 'WebContent'
+1515614514237	Delete element
+1515614563097	Delete element
+1515615346782	Delete elements
+1515618629398	Rename package 'com.tu.lunchy.survlets'

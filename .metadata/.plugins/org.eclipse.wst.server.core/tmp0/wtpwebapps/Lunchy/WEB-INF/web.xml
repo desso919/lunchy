@@ -9,15 +9,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <servlet>
-   <servlet-name>com.tu.lunchy.survlets.HelloWorld</servlet-name>
-   <servlet-class>HelloWorld</servlet-class>
-</servlet>
-
-<servlet-mapping>
-   <servlet-name>com.tu.lunchy.survlets.HelloWorld</servlet-name>
-   <url-pattern>/HelloWorld</url-pattern>
-</servlet-mapping>
-
 </web-app>
