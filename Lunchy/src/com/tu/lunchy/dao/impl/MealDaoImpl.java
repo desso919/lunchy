@@ -11,46 +11,53 @@ import com.tu.lunchy.database.DatabaseConnection;
 
 public class MealDaoImpl {
 
-	public Meal getMeal(int mealId) throws SQLException {
+	public static Meal getMeal(int mealId) {
 		Connection connection = DatabaseConnection.getConnection();
 		Meal meal = null;
 
 		String selectQuery = "select * from meals where meal_id = ?";
 
-		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
-		preparedStatement.setInt(1, mealId);
-		ResultSet resultSet = preparedStatement.executeQuery();
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setInt(1, mealId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				String mealName = resultSet.getString("meal_name");
+				String description = resultSet.getString("description");
+				String ingredients = resultSet.getString("ingredients");
+				String price = resultSet.getString("price");
 
-		while (resultSet.next()) {
-			String mealName = resultSet.getString("meal_name");
-			String description = resultSet.getString("description");
-			String ingredients = resultSet.getString("ingredients");
-			String price = resultSet.getString("price");
-
-			meal = new Meal(mealId, mealName, description, ingredients, Double.valueOf(price));
+				meal = new Meal(mealId, mealName, description, ingredients, Double.valueOf(price));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 
 		return meal;
 	}
-	
-	public boolean addMeal(Meal meal) throws SQLException {
+
+	public static boolean addMeal(Meal meal) {
 		Connection connection = DatabaseConnection.getConnection();
 
 		String sqlQuery = "INSERT INTO meals (meal_name, description, ingredients, price) VALUES (?, ?, ?, ?)";
+		int result = 0;
 
-		PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-		preparedStatement.setString(1, meal.getMealName());
-		preparedStatement.setString(2, meal.getDescription());
-		preparedStatement.setString(3, meal.getIngredients());
-		preparedStatement.setBigDecimal(4, BigDecimal.valueOf(meal.getPrice()));
-		
-		int result = preparedStatement.executeUpdate();
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+			preparedStatement.setString(1, meal.getMealName());
+			preparedStatement.setString(2, meal.getDescription());
+			preparedStatement.setString(3, meal.getIngredients());
+			preparedStatement.setBigDecimal(4, BigDecimal.valueOf(meal.getPrice()));
+			result = preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
-		if(result > 0) {
+		if (result > 0) {
 			return true;
 		}
 
 		return false;
 	}
-	
+
 }

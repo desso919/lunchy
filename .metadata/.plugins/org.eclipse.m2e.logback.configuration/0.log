@@ -1336,3 +1336,288 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2018-01-10 23:27:42,492 [Worker-1130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
 2018-01-10 23:27:42,508 [Worker-1130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-01-10 23:27:42,524 [Worker-1130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 21:41:30,178 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: Lunchy:Lunchy:0.0.1-SNAPSHOT @ C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\pom.xml.
+2018-01-12 21:41:56,819 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 21:41:56,965 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 21:41:56,970 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 21:41:57,031 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:14:39,219 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:14:39,279 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:14:39,281 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:14:39,291 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:15:35,418 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:15:35,488 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:15:35,492 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:15:35,580 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:19:19,961 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:19:19,987 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:19:19,990 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:19:20,024 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:21:19,353 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:19,379 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:21:19,382 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:19,409 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:21:29,282 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:29,336 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:21:29,354 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:29,379 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:21:34,682 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:34,704 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:21:34,707 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:21:34,732 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:22:22,718 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:22:22,764 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:22:22,779 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:22:22,807 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:22:33,134 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:22:33,147 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:22:33,151 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:22:33,173 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:23:06,147 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:23:06,272 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:23:06,290 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:23:06,313 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:23:13,538 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:23:13,597 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:23:13,608 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:23:13,637 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:24:32,625 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:24:32,658 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:24:32,661 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:24:32,687 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:25:15,945 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:15,971 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:25:15,981 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:16,010 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:25:21,821 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:21,853 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:25:21,855 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:21,883 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:25:54,742 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:54,762 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:25:54,770 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:25:54,787 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:26:05,498 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:05,668 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:26:05,671 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:05,743 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:26:13,591 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:13,622 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:26:13,636 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:13,661 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:26:20,543 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:20,553 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:26:20,555 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:20,573 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:26:44,542 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:44,567 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:26:44,578 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:26:44,594 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:27:07,110 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:07,175 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:27:07,177 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:07,208 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:27:14,039 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:14,068 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:27:14,082 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:14,111 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:27:23,011 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:23,030 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:27:23,032 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:23,058 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:27:35,561 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:35,582 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:27:35,592 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:35,610 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:27:37,718 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:37,744 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:27:37,746 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:27:37,792 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:29:11,755 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:11,809 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:29:11,823 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:11,866 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:29:23,522 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:23,533 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:29:23,535 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:23,553 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:29:44,214 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:44,238 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:29:44,246 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:44,264 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:29:55,156 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:55,167 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:29:55,169 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:29:55,188 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:30:12,317 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:12,342 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:30:12,349 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:12,366 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:30:22,112 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:22,121 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:30:22,122 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:22,137 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:30:27,581 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:27,607 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:30:27,615 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:27,639 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:30:39,408 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:39,420 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:30:39,422 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:39,440 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:30:47,028 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:47,047 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:30:47,056 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:30:47,075 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:31:30,339 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:31:30,355 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:31:30,357 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:31:30,380 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:32:49,405 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:32:49,454 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:32:49,466 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:32:49,484 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:32:55,482 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:32:55,495 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:32:55,497 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:32:55,516 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:33:20,855 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:33:20,880 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:33:20,889 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:33:20,904 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:33:58,220 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:33:58,233 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:33:58,235 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:33:58,254 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:35:00,019 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:00,053 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:35:00,063 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:00,080 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:35:02,634 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:02,645 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:35:02,647 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:02,669 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:35:46,205 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:46,242 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:35:46,257 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:46,279 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:35:52,315 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:52,328 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:35:52,330 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:35:52,349 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:36:00,759 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:00,833 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:36:00,856 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:00,884 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:36:07,112 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:07,163 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:36:07,166 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:07,224 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:36:31,615 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:31,764 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:36:31,847 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:32,097 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:36:38,634 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:38,715 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:36:38,726 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:38,750 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:36:56,081 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:56,143 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:36:56,145 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:36:56,165 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:37:18,332 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:18,351 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:37:18,361 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:18,389 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:37:34,756 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:34,771 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:37:34,773 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:34,795 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:37:41,916 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:41,935 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:37:41,945 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:41,968 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:37:46,162 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:46,183 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:37:46,184 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:46,213 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:37:48,960 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:48,979 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:37:48,988 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:37:49,006 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:38:01,074 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:38:01,090 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:38:01,092 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:38:01,116 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:38:27,050 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:38:27,107 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:38:27,119 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:38:27,142 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:06,169 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:06,194 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:06,196 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:06,241 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:09,740 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:09,886 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:09,897 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:09,918 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:17,470 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:17,537 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:17,553 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:17,580 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:27,740 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:27,776 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:27,778 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:27,837 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:31,136 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:31,256 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:31,293 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:31,326 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:39:48,021 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:48,042 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:39:48,055 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:39:48,076 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:40:55,008 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:40:55,032 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:40:55,034 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:40:55,065 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:41:17,567 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:41:17,594 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:41:17,607 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:41:17,628 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:41:22,086 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:41:22,113 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:41:22,115 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:41:22,149 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:44:47,994 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:44:48,122 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:44:48,195 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:44:48,311 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:45:38,532 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:45:38,550 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:45:38,559 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:45:38,586 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:47:15,918 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:16,035 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:47:16,037 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:16,102 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:47:19,287 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:19,322 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:47:19,344 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:19,365 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:47:31,505 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:31,535 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:47:31,537 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:31,579 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:47:41,095 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:41,129 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:47:41,200 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:41,230 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-12 22:47:45,480 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:45,514 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-12 22:47:45,516 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-12 22:47:45,558 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources
+2018-01-13 16:45:37,106 [Worker-390] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-13 16:45:37,319 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\main\resources
+2018-01-13 16:45:37,445 [Worker-390] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-01-13 16:45:37,462 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Äåñèñëàâ\Documents\GitHub\LunchyProject\lunchy\Lunchy\src\test\resources

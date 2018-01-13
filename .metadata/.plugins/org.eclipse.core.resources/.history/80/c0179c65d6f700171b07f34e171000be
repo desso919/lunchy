@@ -1,0 +1,17 @@
+package com.tu.lunchy.servlets;
+
+public enum UserType {
+	
+	ADMINISTRATOR(1), RESTAURANT_WORKER(2), CLIENT(3);
+	
+	private int userType;
+	
+	UserType(int userType) {
+		this.userType = userType;
+	}
+	
+	public int getUserType(){
+		return userType;
+	}
+
+}

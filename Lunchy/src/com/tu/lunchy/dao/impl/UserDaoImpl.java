@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class UserDaoImpl {
 
-	public User getUser(String username, String password) {
+	public static User getUser(String username, String password) {
 		Connection connection = DatabaseConnection.getConnection();
 		User user = null;
 
@@ -35,8 +35,33 @@ public class UserDaoImpl {
 
 		return user;
 	}
+	
+	public static User getUserByUsername(String username) {
+		Connection connection = DatabaseConnection.getConnection();
+		User user = null;
 
-	public boolean addUser(User user) {
+		String selectQuery = "select * from users where username = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setString(1, username);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int userid = resultSet.getInt("user_id");
+				String password = resultSet.getString("password");
+				int account_type = resultSet.getInt("account_type_id");
+
+				user = new User(userid, username, password, account_type);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return user;
+	}
+
+	public static boolean addUser(User user) {
 		Connection connection = DatabaseConnection.getConnection();
 		String sqlQuery = "INSERT INTO users (username, password, account_type_id) VALUES (?, ?, ?)";
 		int result = 0;

@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,18 +39,29 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 		String username = request.getParameter("username");
-		String password = request.getParameter("username");
-		
-		
-		UserDaoImpl userDao = new UserDaoImpl();
-		User user = userDao.getUser(username, password);
+		String password = request.getParameter("password");
 
+		User user = UserDaoImpl.getUser(username, password);
+		
+	
 		if(user != null) {
-			PrintWriter out = response.getWriter();
-			out.println("<h1> Login successed</h1>");
+			UserType userType = UserType.getUserType(user.getAccountType());
+			Cookie loginCookie = new Cookie("user",user.getUsername());
+			loginCookie.setMaxAge(30*60);
+			response.addCookie(loginCookie);
+			
+			if(userType == UserType.ADMINISTRATOR) {
+				PrintWriter out = response.getWriter();
+				out.println("<h1> Login successed ADMINISTRATOR</h1>");
+			} else if(userType == UserType.RESTAURANT_WORKER) {
+				PrintWriter out = response.getWriter();
+				out.println("<h1> Login successed RESTAURANT_WORKER</h1>");
+			} else if(userType == UserType.CLIENT) {
+				PrintWriter out = response.getWriter();
+				out.println("<h1> Login successed CLIENT</h1>");
+			}			
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("<h1> Login failed</h1>");
