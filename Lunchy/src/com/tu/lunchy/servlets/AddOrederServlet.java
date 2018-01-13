@@ -2,6 +2,7 @@ package com.tu.lunchy.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.Optional;
 
 import javax.servlet.ServletException;
@@ -10,12 +11,17 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.tu.lunchy.dao.impl.MealDaoImpl;
+import com.tu.lunchy.dao.impl.OrderDaoImpl;
 import com.tu.lunchy.dao.impl.UserDaoImpl;
 import com.tu.lunchy.dao.objects.Meal;
 import com.tu.lunchy.dao.objects.Order;
 import com.tu.lunchy.dao.objects.User;
+import com.tu.lunchy.util.CookieUtil;
+import com.tu.lunchy.util.OrderStatus;
+import com.tu.lunchy.util.Util;
 
 /**
  * Servlet implementation class AddOrederServlet
@@ -29,14 +35,12 @@ public class AddOrederServlet extends HttpServlet {
      */
     public AddOrederServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -46,29 +50,29 @@ public class AddOrederServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Order order = new Order();
 		User user = null;
-		Optional<Cookie> userCookie = CookieUtil.getCookieByName(null, "user");
-
-		if(userCookie.isPresent()){ 
-			String username = userCookie.get().getValue();
-			user = UserDaoImpl.getUserByUsername(username);
-		}
+		
+    	HttpSession session = request.getSession(false);
+    	
+    	if(session != null) {
+    		 user = (User) session.getAttribute("user");
+    	}
 
 		order.setUserId(user.getUserId());
 		order.setMealId(Integer.parseInt(request.getParameter("mealId")));
-		
-		
-		
 		order.setMenuId(Integer.parseInt(request.getParameter("menuId")));
-		order.setOrderedForTheOffice(isOrderedForTheOffice);
-
-		boolean isAdded = MealDaoImpl.addMeal(order);
+		order.setOrderedForTheOffice(Util.convertIntToBoolean(Integer.parseInt(request.getParameter("isOrderedForTheOffice"))));
+		order.setOrederedForTime(Util.convertStringToTimestamp(request.getParameter("isOrderedForTheOffice")));		
+		order.setOrederTime(Util.getCurrentTimestamp());
+		order.setOrderStatus(OrderStatus.ACCEPTED.toString());
+		
+		boolean isAdded = OrderDaoImpl.addOrder(order);
 
 		if (isAdded) {
 			PrintWriter out = response.getWriter();
-			out.println("<h1>Added succesfully</h1>");
+			out.println("<h1>Added order succesfully</h1>");
 		} else {
 			PrintWriter out = response.getWriter();
-			out.println("<h1> Failed to add new meal</h1>");
+			out.println("<h1> Failed to add new order</h1>");
 		}
 	}
 

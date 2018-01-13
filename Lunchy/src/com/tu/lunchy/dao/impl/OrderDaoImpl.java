@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.tu.lunchy.dao.objects.Order;
 import com.tu.lunchy.database.DatabaseConnection;
+import com.tu.lunchy.util.Util;
 
 public class OrderDaoImpl {
 
@@ -36,7 +37,7 @@ public class OrderDaoImpl {
 				Timestamp orderedForTime = resultSet.getTimestamp("order_for_time");
 
 				allOrders.add(new Order(orderId, userId, menuId, mealId, orderStatus,
-						convertIntToBoolean(isOrderedForTheOffice), orderTime, orderedForTime));
+						Util.convertIntToBoolean(isOrderedForTheOffice), orderTime, orderedForTime));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -57,7 +58,7 @@ public class OrderDaoImpl {
 			preparedStatement.setInt(2, order.getMenuId());
 			preparedStatement.setInt(3, order.getMealId());
 			preparedStatement.setString(4, ORDER_STATUS_ACCEPTED);
-			preparedStatement.setInt(5, convertBooleanToInt(order.isOrderedForTheOffice()));
+			preparedStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
 			preparedStatement.setTimestamp(6, order.getOrederTime());
 			preparedStatement.setTimestamp(7, order.getOrederedForTime());
 
@@ -73,9 +74,7 @@ public class OrderDaoImpl {
 		return false;
 	}
 
-	private static int convertBooleanToInt(boolean booleanValue) {
-		return booleanValue ? 1 : 0;
-	}
+
 
 
 }

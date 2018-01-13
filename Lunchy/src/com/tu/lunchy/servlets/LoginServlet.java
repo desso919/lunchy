@@ -9,9 +9,11 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.tu.lunchy.dao.impl.UserDaoImpl;
 import com.tu.lunchy.dao.objects.User;
+import com.tu.lunchy.util.UserType;
 
 /**
  * Servlet implementation class LoginServlet
@@ -44,13 +46,12 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 
 		User user = UserDaoImpl.getUser(username, password);
-		
-	
+		HttpSession session = request.getSession();
+		session.setAttribute("LoggedUser", user);
+		session.setMaxInactiveInterval(60*60);
+			
 		if(user != null) {
 			UserType userType = UserType.getUserType(user.getAccountType());
-			Cookie loginCookie = new Cookie("user",user.getUsername());
-			loginCookie.setMaxAge(30*60);
-			response.addCookie(loginCookie);
 			
 			if(userType == UserType.ADMINISTRATOR) {
 				PrintWriter out = response.getWriter();

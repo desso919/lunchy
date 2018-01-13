@@ -29,7 +29,6 @@ public class UserDaoImpl {
 				user = new User(userid, username, password, account_type);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

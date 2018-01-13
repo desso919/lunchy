@@ -1,3 +1,6 @@
+package com.tu.lunchy.util;
+
+import java.sql.Timestamp;
 
 public class Util {
 
@@ -7,5 +10,17 @@ public class Util {
 		}
 
 		return Boolean.FALSE;
+	}
+	
+	public static int convertBooleanToInt(boolean booleanValue) {
+		return booleanValue ? 1 : 0;
+	}
+	
+	public static Timestamp convertStringToTimestamp(String timestamp) {
+		return Timestamp.valueOf(timestamp);
+	}
+	
+	public static Timestamp getCurrentTimestamp() {
+		return new Timestamp(System.currentTimeMillis());
 	}
 }

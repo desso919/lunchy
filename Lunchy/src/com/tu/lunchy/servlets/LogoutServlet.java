@@ -9,6 +9,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.tu.lunchy.dao.objects.User;
+import com.tu.lunchy.util.CookieUtil;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -42,6 +46,13 @@ public class LogoutServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
+		
+		HttpSession session = request.getSession(false);
+
+    	if(session != null){
+    		session.invalidate();
+    	}
+    	
 		Optional<Cookie> loginCookie = CookieUtil.getCookieByName(null, "user");
 
 		if (loginCookie.isPresent()) {
