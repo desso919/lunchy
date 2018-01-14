@@ -1,0 +1,12 @@
+package com.tu.lunchy.util;
+
+import javax.servlet.http.HttpSession;
+
+public class SessionUtill {
+
+	public static Object getAttribute(String key) {
+		HttpSession httpSession = request.getSession(false); 
+	    return httpSession.getAttribute("LoggedUser");
+	}
+	
+}

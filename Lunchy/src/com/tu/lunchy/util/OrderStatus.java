@@ -2,5 +2,5 @@ package com.tu.lunchy.util;
 
 public enum OrderStatus {
 
-	ACCEPTED, COOKING, READY;
+	ACCEPTED, COOKING, READY, PENDING;
 }

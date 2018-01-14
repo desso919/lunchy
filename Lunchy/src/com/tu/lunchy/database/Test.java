@@ -3,6 +3,12 @@ package com.tu.lunchy.database;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Currency;
+
+import com.tu.lunchy.util.Util;
 
 public class Test {
 	
@@ -10,12 +16,16 @@ public class Test {
 	
 	public static void main(String[] args) throws SQLException {
 
-		 //method 1
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println(timestamp);
-        
-        System.out.println(Timestamp.valueOf(sdf.format(new Timestamp(System.currentTimeMillis()))).toString());
-
+		String orderForTime = "05:01";
+		if(orderForTime != null) {
+			LocalTime time = LocalTime.parse(orderForTime);
+			LocalDate today = LocalDate.now();
+			LocalDateTime datetime = LocalDateTime.of(today, time);
+			Timestamp orderForDateTime =  Timestamp.valueOf(datetime);
+			System.out.println("HERE: " + orderForDateTime.toString());
+			
+		}
+    		
 	}
 
 }

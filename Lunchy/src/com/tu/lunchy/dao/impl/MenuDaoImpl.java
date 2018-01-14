@@ -34,6 +34,52 @@ public class MenuDaoImpl {
 
 		return menu;
 	}
+	
+	public static String getMenuName(int menuId) {
+		Connection connection = DatabaseConnection.getConnection();
+		String menuName = null;
+
+		String selectQuery = "select menu_name from menus where menu_id = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setInt(1, menuId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if (resultSet.next()) {
+				menuName = resultSet.getString("menu_name");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return menuName;
+	}
+	
+	public static List<Menu> getMenus() {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Menu> menus = new ArrayList<Menu>();
+
+		String selectQuery = "select * from menus";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int menuId = resultSet.getInt("menu_id");
+				String menuName = resultSet.getString("menu_name");
+				List<Meal> mealsForMenu = getMealsForMenu(connection, menuId);
+				
+				menus.add(new Menu(menuId, menuName, mealsForMenu));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return menus;
+	}
+
 
 	private static List<Meal> getMealsForMenu(Connection connection, int menuId) throws SQLException {
 		List<Integer> mealIds = new ArrayList<Integer>();

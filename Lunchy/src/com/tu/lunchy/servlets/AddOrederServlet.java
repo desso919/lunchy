@@ -2,24 +2,17 @@ package com.tu.lunchy.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDate;
-import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.tu.lunchy.dao.impl.MealDaoImpl;
 import com.tu.lunchy.dao.impl.OrderDaoImpl;
-import com.tu.lunchy.dao.impl.UserDaoImpl;
-import com.tu.lunchy.dao.objects.Meal;
 import com.tu.lunchy.dao.objects.Order;
 import com.tu.lunchy.dao.objects.User;
-import com.tu.lunchy.util.CookieUtil;
 import com.tu.lunchy.util.OrderStatus;
 import com.tu.lunchy.util.Util;
 

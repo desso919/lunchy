@@ -2,10 +2,10 @@ package com.tu.lunchy.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Currency;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.tu.lunchy.dao.impl.UserDaoImpl;
 import com.tu.lunchy.dao.objects.User;
-import com.tu.lunchy.util.UserType;
+import com.tu.lunchy.util.Orders;
 
 /**
  * Servlet implementation class LoginServlet
@@ -48,21 +48,13 @@ public class LoginServlet extends HttpServlet {
 		User user = UserDaoImpl.getUser(username, password);
 		HttpSession session = request.getSession();
 		session.setAttribute("LoggedUser", user);
+		session.setAttribute("Orders", new Orders());
 		session.setMaxInactiveInterval(60*60);
-			
+		
 		if(user != null) {
-			UserType userType = UserType.getUserType(user.getAccountType());
+			//AccountType userAccountType = AccessUtil.getUserAccess(user.getAccountType());
+			response.sendRedirect("web/HomePage.jsp");
 			
-			if(userType == UserType.ADMINISTRATOR) {
-				PrintWriter out = response.getWriter();
-				out.println("<h1> Login successed ADMINISTRATOR</h1>");
-			} else if(userType == UserType.RESTAURANT_WORKER) {
-				PrintWriter out = response.getWriter();
-				out.println("<h1> Login successed RESTAURANT_WORKER</h1>");
-			} else if(userType == UserType.CLIENT) {
-				PrintWriter out = response.getWriter();
-				out.println("<h1> Login successed CLIENT</h1>");
-			}			
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("<h1> Login failed</h1>");

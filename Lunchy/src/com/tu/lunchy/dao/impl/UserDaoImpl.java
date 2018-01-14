@@ -59,6 +59,31 @@ public class UserDaoImpl {
 
 		return user;
 	}
+	public static User getUserById(int userId) {
+		Connection connection = DatabaseConnection.getConnection();
+		User user = null;
+
+		String selectQuery = "select * from users where user_id = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setInt(1, userId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int userid = resultSet.getInt("user_id");
+				String username = resultSet.getString("username");
+				int account_type = resultSet.getInt("account_type_id");
+
+				user = new User(userid, username, "", account_type);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return user;
+	}
+	
 
 	public static boolean addUser(User user) {
 		Connection connection = DatabaseConnection.getConnection();

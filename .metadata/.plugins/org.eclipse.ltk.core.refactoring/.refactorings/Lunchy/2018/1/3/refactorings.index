@@ -1,0 +1,18 @@
+1515888111264	Rename type 'SessionUtill'
+1515888234070	Extract constant 'LOGGED_USER_SESSION_KEY'
+1515888370042	Move 'ShowAllOrders.jsp' to 'web'
+1515923599357	Rename method 'getOrdersPrice'
+1515923812533	Move 'MyOrdersPage.jsp' to 'web'
+1515932070143	Rename field 'LOGGED_USER_SESSION_KEY'
+1515944849406	Delete element
+1515944853593	Delete element
+1515944858550	Delete element
+1515956754149	Rename local variable 'menu'
+1515964512577	Rename local variable 't'
+1515964533183	Rename local variable 'time'
+1515964671677	Rename local variable 'orderForTime'
+1515964887406	Rename local variable 'today'
+1515966368913	Rename type 'UpdateIsOrderedForTheOfficeServlet'
+1515966584131	Rename local variable 'isForTheOffice'
+1515966608705	Extract constant 'TRUE'
+1515966630983	Rename local variable 'orderedForTheOffice'

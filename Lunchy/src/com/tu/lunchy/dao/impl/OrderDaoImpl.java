@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.tu.lunchy.dao.objects.Order;
+import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.database.DatabaseConnection;
 import com.tu.lunchy.util.Util;
 
@@ -24,6 +25,38 @@ public class OrderDaoImpl {
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int orderId = resultSet.getInt("order_id");
+				int userId = resultSet.getInt("user_id");
+				int menuId = resultSet.getInt("menu_id");
+				int mealId = resultSet.getInt("meal_id");
+				String orderStatus = resultSet.getString("order_status");
+				int isOrderedForTheOffice = resultSet.getInt("is_oredred_for_office");
+				Timestamp orderTime = resultSet.getTimestamp("order_time");
+				Timestamp orderedForTime = resultSet.getTimestamp("order_for_time");
+
+				allOrders.add(new Order(orderId, userId, menuId, mealId, orderStatus,
+						Util.convertIntToBoolean(isOrderedForTheOffice), orderTime, orderedForTime));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return allOrders;
+	}
+	
+
+	public static List<Order> getAllOrdersForUser(User user) {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Order> allOrders = new ArrayList<Order>();
+
+		String selectQuery = "select * from orders where user_id = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setInt(1, user.getUserId());
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {

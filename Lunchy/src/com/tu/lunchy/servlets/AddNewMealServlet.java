@@ -15,7 +15,7 @@ import com.tu.lunchy.dao.objects.Meal;
 /**
  * Servlet implementation class AddNewMeal
  */
-@WebServlet("/AddNewMeal")
+@WebServlet("/AddNewMealServlet")
 public class AddNewMealServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -43,7 +43,7 @@ public class AddNewMealServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		Meal meal = new Meal();
-		meal.setMealName(request.getParameter("meal_name"));
+		meal.setMealName(request.getParameter("mealName"));
 		meal.setDescription(request.getParameter("description"));
 		meal.setIngredients(request.getParameter("ingredients"));
 		meal.setPrice(Double.parseDouble(request.getParameter("price")));

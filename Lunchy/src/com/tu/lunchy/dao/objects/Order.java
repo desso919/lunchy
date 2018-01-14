@@ -9,6 +9,7 @@ public class Order {
 	private int menuId;
 	private int mealId;
 	private String orderStatus;
+	private String MenuName;
 	private boolean isOrderedForTheOffice;
 	private Timestamp orederTime;
 	private Timestamp orederedForTime;
@@ -91,6 +92,14 @@ public class Order {
 		return orederTime;
 	}
 
+	public String getMenuName() {
+		return MenuName;
+	}
+
+	public void setMenuName(String menuName) {
+		MenuName = menuName;
+	}
+
 	public void setOrederTime(Timestamp orederTime) {
 		this.orederTime = orederTime;
 	}
@@ -102,6 +111,8 @@ public class Order {
 	public void setOrederedForTime(Timestamp orederedForTime) {
 		this.orederedForTime = orederedForTime;
 	}
+	
+	
 
 	@Override
 	public String toString() {

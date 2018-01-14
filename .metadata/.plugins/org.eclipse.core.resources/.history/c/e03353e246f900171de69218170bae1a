@@ -1,0 +1,44 @@
+package com.tu.lunchy.util;
+
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.Currency;
+import java.util.List;
+
+public class Util {
+
+	public static Currency APPLICATION_CURRENCY = Currency.getInstance("BGN");
+
+	public static Boolean convertIntToBoolean(int intValue) {
+		if (intValue == 1) {
+			return Boolean.TRUE;
+		}
+
+		return Boolean.FALSE;
+	}
+
+	public static List<String> getSupportedCurrencies() {
+		return Arrays.asList(Currency.getInstance("BGN").toString(), Currency.getInstance("EUR").toString(), Currency.getInstance("BGUSDN").toString());
+	}
+	
+	public static void setDefaultApplicationCurrency(Currency currency){
+		List<String> allSupportedCurrencies = getSupportedCurrencies();
+		
+		for (String currencyText : allSupportedCurrencies) {
+			if()
+		}
+		APPLICATION_CURRENCY = currency;
+	}
+	
+	public static int convertBooleanToInt(boolean booleanValue) {
+		return booleanValue ? 1 : 0;
+	}
+
+	public static Timestamp convertStringToTimestamp(String timestamp) {
+		return Timestamp.valueOf(timestamp);
+	}
+
+	public static Timestamp getCurrentTimestamp() {
+		return new Timestamp(System.currentTimeMillis());
+	}
+}

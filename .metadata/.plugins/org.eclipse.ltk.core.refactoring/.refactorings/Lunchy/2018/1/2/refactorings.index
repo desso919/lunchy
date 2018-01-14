@@ -26,3 +26,9 @@
 1515861800299	Rename type 'AddNewMeal'
 1515861809176	Delete element
 1515874304194	Delete element
+1515876922882	Delete element
+1515885829365	Rename method 'getUserType'
+1515886052143	Rename enum constant 'RESTAUTRANT_WORKER'
+1515886063035	Delete element
+1515886194238	Move 'HomePage.jsp' to 'web'
+1515886345060	Rename local variable 'userType'
