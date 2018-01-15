@@ -31,19 +31,31 @@ public class Orders {
 		}
 		return false;
 	}
-	
-	public int getOrdersCount(){
+
+	public boolean removeOrder(int orderId) {
+		for (Order order : orders) {
+			if (order.getOrderId() == orderId) {
+				return orders.remove(order);
+			}
+		}
+		return false;
+	}
+
+	public int getOrdersCount() {
 		return orders.size();
 	}
-	
+
 	private double getAllOrdersPrice() {
 		double allOrderPrice = 0;
-		
+
 		for (Order order : orders) {
 			double orderPrice = MealDaoImpl.getMeal(order.getMealId()).getPrice();
 			allOrderPrice = allOrderPrice + orderPrice;
 		}
 		return allOrderPrice;
 	}
-
+	
+	public void removeAll () {
+		orders.clear();
+	}
 }

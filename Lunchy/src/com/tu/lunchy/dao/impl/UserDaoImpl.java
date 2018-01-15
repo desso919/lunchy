@@ -24,9 +24,11 @@ public class UserDaoImpl {
 
 			while (resultSet.next()) {
 				int userid = resultSet.getInt("user_id");
+				String firstName = resultSet.getString("first_name");
+				String lastName = resultSet.getString("last_name");
 				int account_type = resultSet.getInt("account_type_id");
 
-				user = new User(userid, username, password, account_type);
+				user = new User(userid, firstName, lastName, username, password, account_type);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -48,10 +50,12 @@ public class UserDaoImpl {
 
 			while (resultSet.next()) {
 				int userid = resultSet.getInt("user_id");
+				String firstName = resultSet.getString("first_name");
+				String lastName = resultSet.getString("last_name");
 				String password = resultSet.getString("password");
 				int account_type = resultSet.getInt("account_type_id");
 
-				user = new User(userid, username, password, account_type);
+				user = new User(userid, firstName, lastName, username, password, account_type);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -72,10 +76,12 @@ public class UserDaoImpl {
 
 			while (resultSet.next()) {
 				int userid = resultSet.getInt("user_id");
+				String firstName = resultSet.getString("first_name");
+				String lastName = resultSet.getString("last_name");
 				String username = resultSet.getString("username");
 				int account_type = resultSet.getInt("account_type_id");
 
-				user = new User(userid, username, "", account_type);
+				user = new User(userid, firstName, lastName, username, "", account_type);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -87,18 +93,18 @@ public class UserDaoImpl {
 
 	public static boolean addUser(User user) {
 		Connection connection = DatabaseConnection.getConnection();
-		String sqlQuery = "INSERT INTO users (username, password, account_type_id) VALUES (?, ?, ?)";
+		String sqlQuery = "INSERT INTO users (username, password, first_name, last_name, account_type_id) VALUES (?, ?, ?, ?, ?)";
 		int result = 0;
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 			preparedStatement.setString(1, user.getUsername());
 			preparedStatement.setString(2, user.getPassword());
-			;
-			preparedStatement.setInt(3, user.getAccountType());
+			preparedStatement.setString(3, user.getFirstName());
+			preparedStatement.setString(4, user.getLastName());
+			preparedStatement.setInt(5, user.getAccountType());
 			result = preparedStatement.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

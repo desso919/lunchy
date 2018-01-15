@@ -1,0 +1,107 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Multicusine a Hotels and Restaurants Category Website
+	Template | Contact :: W3layouts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!----start-header----->
+	<div class="header">
+		<div class="wrap">
+			<div class="top-header">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="social-icons">
+					<ul>
+						<li><a href="#"><img src="images/facebook.png"
+								title="facebook" /></a></li>
+						<li><a href="#"><img src="images/twitter.png"
+								title="twitter" /></a></li>
+						<li><a href="#"><img src="images/google.png"
+								title="google pluse" /></a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!---start-top-nav---->
+			<div class="top-nav">
+				<div class="top-nav-left">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="top-nav-right">
+					<form>
+						<input type="text"><input type="submit" value="" />
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!---End-top-nav---->
+		</div>
+	</div>
+	<!----End-header----->
+	<!---start-content---->
+	<div class="content">
+		<!---start-contact---->
+		<div class="contact">
+			<div class="wrap">
+				<div class="section group">
+					<div class="col span_1_of_3">
+						<div class="contact_info">
+							<h3>Find Us Here</h3>
+							<div class="map">
+								<iframe width="100%" height="175" frameborder="0" scrolling="no"
+									marginheight="0" marginwidth="0"
+									src="https://www.google.bg/maps/place/%D0%A0%D0%B0%D1%84%D0%B8+%D0%B1%D0%B0%D1%80+%D0%B8+%D0%B4%D0%B6%D0%B5%D0%BB%D0%B0%D1%82%D0%BE/@42.6920474,23.322372,15z/data=!4m5!3m4!1s0x0:0x534490ffec1464f7!8m2!3d42.6920474!4d23.322372&amp;output=embed"></iframe>
+								<br> <small><a
+									href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265"
+									style="color: #666; text-align: left; font-size: 0.85em">View
+										Larger Map</a></small>
+							</div>
+						</div>
+						<div class="company_address">
+							<h3>Information :</h3>
+							<p>Address: street "Angel Kunchev" 11, 1000 Center, Sofia</p>
+							<p>Bulgaria</p>
+							<p>Phone:(00) 222 666 444</p>
+							<p>
+								Email: <span><a href="mailto:info@example.com">lunchy@gmail.com</a></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="copy-right"
+		style="position: absolute; width: 100%; bottom: 35px">
+		<div class="top-to-page">
+			<a href="#top" class="scroll"> </a>
+			<div class="clear"></div>
+		</div>
+		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
+	</div>
+	<!---End-footer---->
+</body>
+</html>
+

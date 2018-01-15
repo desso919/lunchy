@@ -1,20 +1,18 @@
 package com.tu.lunchy.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.tu.lunchy.dao.impl.OrderDaoImpl;
 import com.tu.lunchy.dao.objects.Order;
-import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.util.OrderStatus;
-import com.tu.lunchy.util.Util;
+import com.tu.lunchy.util.Orders;
+import com.tu.lunchy.util.SessionUtil;
 
 /**
  * Servlet implementation class AddOrederServlet
@@ -22,50 +20,48 @@ import com.tu.lunchy.util.Util;
 @WebServlet("/AddOrederServlet")
 public class AddOrederServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddOrederServlet() {
-        super();
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public AddOrederServlet() {
+		super();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Order order = new Order();
-		User user = null;
-		
-    	HttpSession session = request.getSession(false);
-    	
-    	if(session != null) {
-    		 user = (User) session.getAttribute("user");
-    	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		Orders orders = SessionUtil.getUserOrders(request);
 
-		order.setUserId(user.getUserId());
-		order.setMealId(Integer.parseInt(request.getParameter("mealId")));
-		order.setMenuId(Integer.parseInt(request.getParameter("menuId")));
-		order.setOrderedForTheOffice(Util.convertIntToBoolean(Integer.parseInt(request.getParameter("isOrderedForTheOffice"))));
-		order.setOrederedForTime(Util.convertStringToTimestamp(request.getParameter("isOrderedForTheOffice")));		
-		order.setOrederTime(Util.getCurrentTimestamp());
-		order.setOrderStatus(OrderStatus.ACCEPTED.toString());
-		
-		boolean isAdded = OrderDaoImpl.addOrder(order);
+		if(orders != null) {
+			for (Order order : orders.getOrders()) {
+				order.setOrderStatus(OrderStatus.ACCEPTED.toString());
+				boolean isAdded = OrderDaoImpl.addOrder(order);
 
-		if (isAdded) {
-			PrintWriter out = response.getWriter();
-			out.println("<h1>Added order succesfully</h1>");
+				if (!isAdded) {
+					order.setOrderStatus(OrderStatus.FAILED.toString());
+				}
+			}
+
+			SessionUtil.updateUserOrders(request, orders);
+			
+			// redirect to my orders page anyway
+			response.sendRedirect("web/MyOrdersPage.jsp");
 		} else {
-			PrintWriter out = response.getWriter();
-			out.println("<h1> Failed to add new order</h1>");
+			// redirect to login page
+			response.sendRedirect("index.html");
 		}
 	}
 

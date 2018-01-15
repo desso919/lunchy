@@ -25,6 +25,17 @@
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
 				</div>
+					<div style="float: right;">
+					<form method="post" action="/Lunchy/LogoutServlet">
+						<input type="submit" class="mybutton" value="Log out">
+					</form>
+				</div>
+
+				<div style="float: right; color: wheat; padding: 10px 15px;">
+					<h2>
+						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+					</h2>
+				</div>	
 				<div class="clear"></div>
 			</div>
 			<!---start-top-nav---->
@@ -59,6 +70,19 @@
 						%>
 					</ul>
 				</div>
+				<div class="top-nav-right">
+					<%
+						if (userAccountType == AccountType.CLIENT) {
+							Orders userOrders = SessionUtil.getUserOrders(request);
+					%>
+					<p style="color: white; font-size: 24px;">
+						Orders total price:
+						<%=userOrders.getOrdersPrice() + " " + Util.APPLICATION_CURRENCY%>
+					</p>
+					<%
+						}
+					%>
+				</div>
 				<div class="clear"></div>
 			</div>
 			<!---End-top-nav---->
@@ -70,41 +94,36 @@
 	<div class="gallerys">
 		<div class="wrap">
 			<h3>MENU</h3>
-				<div class="gallery-grid">
-			<%
-				List<Menu> menus = MenuDaoImpl.getMenus();
+			<div class="gallery-grids">
 
-				for (Menu menu : menus) {
-					for (Meal meal : menu.getMealsForThisMenu()) {
-						String mealName = meal.getMealName();
-			%>
-		
-			<h2><%=menu.getMenuName()%></h2>
-				<a href="#"><img src="images/slider1.jpg" alt=""><span><%=meal.getPrice() +" "+ Util.APPLICATION_CURRENCY%></span></a>
-				<h4><%=meal.getMealName()%></h4>
-				<p><%=meal.getDescription()%></p>
-				<p><%=meal.getIngredients()%></p>
-				<div class="gallery-button">
-					<form method="post" action="/Lunchy/AddOrderToSessionServlet">
-						<input type="hidden" name="mealId" value="<%=meal.getMealId()%>">
-						<input type="hidden" name="userId" value="<%=user.getUserId()%>">
-						<input type="hidden" name="menuId" value="<%=menu.getMenuId()%>"> 
-						<span><input type="submit" class="mybutton" value="Order"></span>
-					</form>
+				<%
+					List<Menu> menus = MenuDaoImpl.getMenus();
+
+					for (Menu menu : menus) {
+						for (Meal meal : menu.getMealsForThisMenu()) {
+							String mealName = meal.getMealName();
+				%>
+				<div class="gallery-grid grid2">
+					<h2><%=menu.getMenuName()%></h2>
+					<br></br> <a href="#"><img src="images/slider1.jpg" alt=""><span><%=meal.getPrice() + " " + Util.APPLICATION_CURRENCY%></span></a>
+					<h4><%=meal.getMealName()%></h4>
+					<p><%=meal.getDescription()%></p>
+					<p>
+						Ingredients:
+						<%=meal.getIngredients()%></p>
+					<div class="gallery-button">
+						<form method="post" action="/Lunchy/AddOrderToSessionServlet">
+							<input type="hidden" name="mealId" value="<%=meal.getMealId()%>">
+							<input type="hidden" name="userId" value="<%=user.getUserId()%>">
+							<input type="hidden" name="menuId" value="<%=menu.getMenuId()%>">
+							<span><input type="submit" class="mybutton" value="Order"></span>
+						</form>
+					</div>
 				</div>
 				<%
 					}
-				%>
-					<div class="clear"></div>
-				<%
 					}
 				%>
-				<div class="clear"></div>
-				<div class="projects-bottom-paination">
-					<ul>
-						<li class="active"><a href="#">1</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>

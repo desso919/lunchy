@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,7 +93,7 @@ public class OrderDaoImpl {
 			preparedStatement.setInt(3, order.getMealId());
 			preparedStatement.setString(4, ORDER_STATUS_ACCEPTED);
 			preparedStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
-			preparedStatement.setTimestamp(6, order.getOrederTime());
+			preparedStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));
 			preparedStatement.setTimestamp(7, order.getOrederedForTime());
 
 			result = preparedStatement.executeUpdate();

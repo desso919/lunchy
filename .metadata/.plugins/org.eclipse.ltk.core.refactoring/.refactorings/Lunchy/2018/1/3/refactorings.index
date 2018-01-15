@@ -16,3 +16,15 @@
 1515966584131	Rename local variable 'isForTheOffice'
 1515966608705	Extract constant 'TRUE'
 1515966630983	Rename local variable 'orderedForTheOffice'
+1515971547587	Delete element
+1516049209153	Delete element
+1516049227057	Delete element
+1516049232185	Delete element
+1516049242604	Delete element
+1516049260434	Delete element
+1516049267050	Delete element
+1516049273813	Delete element
+1516054655069	Rename field 'lastname'
+1516054680879	Rename local variable 'lastname'
+1516054697261	Rename method 'getLastname'
+1516054702089	Rename method 'setLastname'

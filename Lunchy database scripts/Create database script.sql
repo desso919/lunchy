@@ -32,6 +32,12 @@ CREATE TABLE `lunchy_db`.`account_types` (
     REFERENCES `lunchy_db`.`account_types` (`account_type_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+	
+-- ALTER users TABLE
+	ALTER TABLE `lunchy_db`.`users` 
+ADD COLUMN `first_name` VARCHAR(100) NOT NULL AFTER `account_type_id`,
+ADD COLUMN `last_name` VARCHAR(100) NOT NULL AFTER `first_name`;
+
 
 	
 -- CREATE meals TABLE

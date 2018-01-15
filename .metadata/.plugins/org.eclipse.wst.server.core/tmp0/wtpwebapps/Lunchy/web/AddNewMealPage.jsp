@@ -24,6 +24,17 @@
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
 				</div>
+					<div style="float: right;">
+					<form method="post" action="/Lunchy/LogoutServlet">
+						<input type="submit" class="mybutton" value="Log out">
+					</form>
+				</div>
+
+				<div style="float: right; color: wheat; padding: 10px 15px;">
+					<h2>
+						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+					</h2>
+				</div>
 				<div class="clear"></div>
 			</div>
 			<!---start-top-nav---->
@@ -125,12 +136,12 @@
 			document.getElementById("addNewMealForm").reset();
 		}
 	</script>
-	<div class="copy-right">
+	<div class="copy-right" style="position: absolute; width:100%; bottom:35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
 			<div class="clear"></div>
 		</div>
-		<p>© Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
+		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
 	</div>
 	<!---End-footer---->
 </body>

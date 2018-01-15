@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.tu.lunchy.dao.impl.UserDaoImpl;
 import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.util.Orders;
+import com.tu.lunchy.util.SessionUtil;
 
 /**
  * Servlet implementation class LoginServlet
@@ -46,20 +47,15 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 
 		User user = UserDaoImpl.getUser(username, password);
-		HttpSession session = request.getSession();
-		session.setAttribute("LoggedUser", user);
-		session.setAttribute("Orders", new Orders());
-		session.setMaxInactiveInterval(60*60);
-		
+
 		if(user != null) {
-			//AccountType userAccountType = AccessUtil.getUserAccess(user.getAccountType());
+			SessionUtil.setLoggedInUser(request, user);
+			SessionUtil.setUserOrders(request, new Orders());
 			response.sendRedirect("web/HomePage.jsp");
-			
 		} else {
 			PrintWriter out = response.getWriter();
-			out.println("<h1> Login failed</h1>");
-		}
-		
+			out.println("<h1> Login failed. User not found in the database.</h1>");
+		}		
 	}
 
 }

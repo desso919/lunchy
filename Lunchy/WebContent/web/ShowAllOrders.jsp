@@ -26,7 +26,7 @@
 }
 
 #orders td, #customers th {
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
 	padding: 8px;
 }
 
@@ -40,12 +40,14 @@
 
 #orders th {
 	padding-top: 12px;
+	border: 2px solid #ddd;
 	padding-bottom: 12px;
-	text-align: left;
+	text-align: center;
 	background-color: #afad4c;
 	color: white;
 }
 </style>
+
 </head>
 <body>
 	<!----start-header----->
@@ -54,6 +56,17 @@
 			<div class="top-header">
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+					<div style="float: right;">
+					<form method="post" action="/Lunchy/LogoutServlet">
+						<input type="submit" class="mybutton" value="Log out">
+					</form>
+				</div>
+
+				<div style="float: right; color: wheat; padding: 10px 15px;">
+					<h2>
+						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+					</h2>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -83,6 +96,7 @@
 						%>
 						<li class="active"><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="MyOrdersPage.jsp">My Orders</a></li>
 						<%
 							}
 						%>
@@ -96,35 +110,85 @@
 	</div>
 
 	<div>
-		<div class="wrap">
+		<div class="wrap" style="padding: 40px 0px 10px 0px">
 			<table id="orders">
 				<tr>
 					<th>Order Id</th>
 					<th>User</th>
-					<th>Menu</th>
 					<th>Meal</th>
+					<th>Price</th>
 					<th>Order Status</th>
 					<th>Order Time</th>
 					<th>Order For</th>
 					<th>Is ordered for the office</th>
 				</tr>
 				<%
-				   SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
-							
-					List<Order> orders = OrderDaoImpl.getAllOrders();
-					for (Order order : orders) {
-						User user = UserDaoImpl.getUserById(order.getUserId());
+					SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
+
+					for (Order order : OrderDaoImpl.getAllOrders()) {
 						Meal meal = MealDaoImpl.getMeal(order.getMealId());
 				%>
 				<tr>
 					<td><%=order.getOrderId()%></td>
-					<td><%=user.getUsername()%></td>
-					<td><%=order.getMenuId()%></td>
+					<td><%=UserDaoImpl.getUserById(order.getUserId()).getUsername()%></td>
 					<td><%=meal.getMealName()%></td>
-					<td><%=order.getOrderStatus()%></td>
+					<td><%=meal.getPrice() + " " + Util.APPLICATION_CURRENCY%></td>
+					<%
+						String statusColor = "black";
+							String orderStatus = order.getOrderStatus();
+							String orderStatusToShow = null;
+
+							if (orderStatus.equalsIgnoreCase(OrderStatus.PENDING.toString())) {
+								statusColor = "red";
+								orderStatusToShow = "NOT PURCHASED";
+							} else if (orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
+								statusColor = "green";
+								orderStatusToShow = OrderStatus.READY.toString();
+							} else if (orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
+								statusColor = "yellow";
+								orderStatusToShow = "ORDER IS ACCEPTED";
+							} else if (orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
+								statusColor = "orange";
+								orderStatusToShow = OrderStatus.COOKING.toString();
+							}
+					%>
+					<td style="color: <%=statusColor%>; font-size: 16px;"><%=orderStatusToShow%></td>
+					<%
+						if (order.getOrederTime() == null) {
+					%>
+					<td>Not Selected</td>
+					<%
+						} else {
+					%>
 					<td><%=sdf.format(order.getOrederTime())%></td>
+					<%
+						}
+					%>
+					<%
+						if (order.getOrederedForTime() == null) {
+					%>
+					<td>Not Selected</td>
+					<%
+						} else {
+					%>
 					<td><%=sdf.format(order.getOrederedForTime())%></td>
-					<td><%=order.isOrderedForTheOffice()%></td>
+					<%
+						}
+					%>
+					<%
+						if (order.isOrderedForTheOffice()) {
+					%>
+					<td>YES</td>
+					<%
+						
+					%>
+					<%
+						} else {
+					%>
+					<td>NO</td>
+					<%
+						}
+					%>
 				</tr>
 				<%
 					}
@@ -134,12 +198,12 @@
 		</div>
 	</div>
 
-	<div class="copy-right">
+	<div class="copy-right" style="position: absolute; width:100%; bottom:35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
 			<div class="clear"></div>
 		</div>
-		<p>© Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
+		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
 	</div>
 	<!---End-footer---->
 </body>

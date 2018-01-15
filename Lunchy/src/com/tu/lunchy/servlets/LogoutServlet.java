@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.util.CookieUtil;
+import com.tu.lunchy.util.SessionUtil;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -35,7 +35,6 @@ public class LogoutServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -47,19 +46,15 @@ public class LogoutServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		
+		SessionUtil.getUserOrders(request).removeAll();	
 		HttpSession session = request.getSession(false);
-
+		
     	if(session != null){
     		session.invalidate();
     	}
-    	
-		Optional<Cookie> loginCookie = CookieUtil.getCookieByName(null, "user");
 
-		if (loginCookie.isPresent()) {
-			loginCookie.get().setMaxAge(0);
-			response.addCookie(loginCookie.get());
-		}
-		response.sendRedirect("/index.html");
+    	// redirect to login page
+		response.sendRedirect("/Lunchy");
 	}
 
 }

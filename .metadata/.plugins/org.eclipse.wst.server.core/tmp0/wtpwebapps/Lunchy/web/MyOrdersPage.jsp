@@ -62,6 +62,17 @@
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
 				</div>
+					<div style="float: right;">
+					<form method="post" action="/Lunchy/LogoutServlet">
+						<input type="submit" class="mybutton" value="Log out">
+					</form>
+				</div>
+
+				<div style="float: right; color: wheat; padding: 10px 15px;">
+					<h2>
+						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+					</h2>
+				</div>
 				<div class="clear"></div>
 			</div>
 			<!---start-top-nav---->
@@ -120,8 +131,8 @@
 				<th>Meal price</th>
 				<th>Order status</th>
 				<th>Order for time</th>
-				<th>Order for the office</th>		
-				<th> </th>	
+				<th>Order for the office</th>
+				<th></th>
 			</tr>
 			<%
 				SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
@@ -134,23 +145,23 @@
 				<td><%=meal.getMealName()%></td>
 				<td><%=meal.getPrice() + " " + Util.APPLICATION_CURRENCY%></td>
 				<%
-				String statusColor ="black";	
-				String orderStatus = order.getOrderStatus();
-				String orderStatusToShow = null;
-				
-				if(orderStatus.equalsIgnoreCase(OrderStatus.PENDING.toString())) {
-					statusColor = "red";
-					orderStatusToShow = "NOT PURCHASED";
-				} else if(orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
-					statusColor = "green";
-					orderStatusToShow = OrderStatus.READY.toString();
-				} else if(orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
-					statusColor = "yellow";
-					orderStatusToShow = "ORDER IS ACCEPTED";
-				} else if(orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
-						statusColor = "orange";
-						orderStatusToShow = OrderStatus.COOKING.toString();
-				}
+					String statusColor = "black";
+						String orderStatus = order.getOrderStatus();
+						String orderStatusToShow = null;
+
+						if (orderStatus.equalsIgnoreCase(OrderStatus.PENDING.toString())) {
+							statusColor = "red";
+							orderStatusToShow = "NOT PURCHASED";
+						} else if (orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
+							statusColor = "green";
+							orderStatusToShow = OrderStatus.READY.toString();
+						} else if (orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
+							statusColor = "yellow";
+							orderStatusToShow = "ORDER IS ACCEPTED";
+						} else if (orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
+							statusColor = "orange";
+							orderStatusToShow = OrderStatus.COOKING.toString();
+						}
 				%>
 				<td style="color: <%=statusColor%>; font-size: 16px;"><%=orderStatusToShow%></td>
 				<%
@@ -194,8 +205,10 @@
 					}
 				%>
 				<td>
-					<form method="post" action="/Lunchy/AddOrderServlet">
-						<input style="color: red;" type="submit" value="Remove">
+					<form method="post" action="/Lunchy/RemoveOrderFromSessionServlet">
+						<input type="hidden" name="orderId"
+							value="<%=order.getOrderId()%>"> <input
+							style="color: red;" type="submit" value="Remove">
 					</form>
 				</td>
 			</tr>
@@ -205,20 +218,19 @@
 
 		</table>
 
-
 		<div style="padding: 50px 0px 10px 0px">
-			<form method="post" action="/Lunchy/AddOrderServlet">
+			<form method="post" action="/Lunchy/AddOrederServlet">
 				<input type="submit" class="mybutton" value="Order Now">
 			</form>
 		</div>
 	</div>
 
-	<div class="copy-right">
+	<div class="copy-right" style="position: absolute; width:100%; bottom:35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
 			<div class="clear"></div>
 		</div>
-		<p>© Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
+		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
 	</div>
 	<!---End-footer---->
 </body>
