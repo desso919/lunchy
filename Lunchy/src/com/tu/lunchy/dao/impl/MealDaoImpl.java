@@ -35,6 +35,28 @@ public class MealDaoImpl {
 
 		return meal;
 	}
+	
+	public static int getMealIdByName(String name) {
+		Connection connection = DatabaseConnection.getConnection();
+        int mealId = 0;
+        
+		String selectQuery = "select * from meals where meal_name = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setString(1, name);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			if(resultSet.next()) {
+				mealId = resultSet.getInt("meal_id");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return mealId;
+	}
 
 	public static boolean addMeal(Meal meal) {
 		Connection connection = DatabaseConnection.getConnection();
@@ -48,6 +70,29 @@ public class MealDaoImpl {
 			preparedStatement.setString(2, meal.getDescription());
 			preparedStatement.setString(3, meal.getIngredients());
 			preparedStatement.setBigDecimal(4, BigDecimal.valueOf(meal.getPrice()));
+			result = preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		if (result > 0) {
+			return true;
+		}
+
+		return false;
+	}
+	
+	public static boolean addMenuMeal(int menuId, int mealId) {
+		Connection connection = DatabaseConnection.getConnection();
+
+		String sqlQuery = "INSERT INTO menu_meals (menu_id, meal_id) VALUES (?, ?)";
+		int result = 0;
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+			preparedStatement.setInt(1, menuId);
+			preparedStatement.setInt(2, mealId);
+
 			result = preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

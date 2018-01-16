@@ -2,6 +2,7 @@ package com.tu.lunchy.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.tu.lunchy.dao.impl.MealDaoImpl;
+import com.tu.lunchy.dao.impl.MenuDaoImpl;
 import com.tu.lunchy.dao.objects.Meal;
+import com.tu.lunchy.dao.objects.Menu;
+import com.tu.lunchy.util.CheckUtil;
 
 /**
  * Servlet implementation class AddNewMeal
@@ -42,21 +46,48 @@ public class AddNewMealServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		Meal meal = new Meal();
-		meal.setMealName(request.getParameter("mealName"));
-		meal.setDescription(request.getParameter("description"));
-		meal.setIngredients(request.getParameter("ingredients"));
-		meal.setPrice(Double.parseDouble(request.getParameter("price")));
+		String mealName = request.getParameter("mealName");
+		String menuName = request.getParameter("menuName");
+		String mealDescription = request.getParameter("description");
+		String mealIngredients = request.getParameter("ingredients");
 
-		boolean isAdded = MealDaoImpl.addMeal(meal);
+		double price = Double.parseDouble(request.getParameter("price"));
+		Meal meal = new Meal(mealName, mealDescription, mealIngredients, price);
 
-		if (isAdded) {
-			PrintWriter out = response.getWriter();
-			out.println("<h1>Added succesfully</h1>");
+		if (CheckUtil.isValidMeal(meal)) {
+			boolean isMealAdded = MealDaoImpl.addMeal(meal);
+
+			if (isMealAdded) {
+				boolean isMealToMenuAdded = addMealToMenuMealsTable(mealName, menuName);
+
+				if (isMealToMenuAdded) {
+					response.sendRedirect("web/AddNewMealPage.jsp");
+				} else {
+					response.getWriter().println("<h1> Failed to add new meal</h1>");
+				}
+				
+			} else {
+				response.getWriter().println("<h1> Failed to add new meal</h1>");
+			}
+
 		} else {
-			PrintWriter out = response.getWriter();
-			out.println("<h1> Failed to add new meal</h1>");
+
+			response.getWriter().println("<h1> Failed to add new meal. Meal values are not correct</h1>");
 		}
+	}
+
+	private boolean addMealToMenuMealsTable(String mealName, String menuName) {
+		List<Menu> menus = MenuDaoImpl.getMenus();
+		int menuId = 0;
+
+		for (Menu menu : menus) {
+			if (menu.getMenuName().equalsIgnoreCase(menuName)) {
+				menuId = menu.getMenuId();
+			}
+		}
+
+		int mealId = MealDaoImpl.getMealIdByName(mealName);
+		return MealDaoImpl.addMenuMeal(menuId, mealId);
 	}
 
 }

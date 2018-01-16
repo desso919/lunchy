@@ -1,0 +1,23 @@
+package com.tu.lunchy.util;
+
+import com.tu.lunchy.dao.objects.Meal;
+
+public class CheckUtil {
+
+	public static boolean isValidMeal(Meal meal) {
+		
+		if(isValidString(meal.getMealName()))
+		
+		return false;
+	}
+	
+	private boolean isValidString(String value) {
+		
+		if(value != null) {
+			if(!value.equals("")) {
+				return true;
+			}
+		}
+		return false;
+	}
+}

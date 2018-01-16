@@ -93,8 +93,8 @@ public class OrderDaoImpl {
 			preparedStatement.setInt(3, order.getMealId());
 			preparedStatement.setString(4, ORDER_STATUS_ACCEPTED);
 			preparedStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
-			preparedStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));
-			preparedStatement.setTimestamp(7, order.getOrederedForTime());
+			preparedStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));		
+			preparedStatement.setTimestamp(7, order.getOrederedForTime());		
 
 			result = preparedStatement.executeUpdate();
 		} catch (SQLException e) {

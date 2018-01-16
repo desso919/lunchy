@@ -40,8 +40,8 @@
 	<div class="header">
 		<div class="wrap">
 			<div class="top-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				<div style="float: left; color: white; padding: 10px 15px;">
+					<p style="font-size: 35px; font-style: oblique; font-weight: bold; color: darkgoldenrod;">Lunchy. Make your life tasty. </p>
 				</div>
 				<div style="float: right;">
 					<form method="post" action="/Lunchy/LogoutServlet">
@@ -68,13 +68,13 @@
 						%>
 						<li class="active"><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
-						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
-						<li><a href="AddNewUserPage.jsp">Add New User</a></li>
+						<li><a href="AddUserPage.jsp">Add New User</a></li>
 						<%
 							} else if (userAccountType == AccountType.RESTAURANT_WORKER) {
 						%>
 						<li class="active"><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="AddMenuPage.jsp">Add New Menu</a></li>
 						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
 						<li><a href="ShowAllOrders.jsp">Show Orders</a></li>
 						<%
@@ -125,7 +125,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
-					<a class="button" href="MyOrdersPage.jsp">Purchase now</a>
+					<a class="button" href="MyOrdersPage.jsp">Order now</a>
 				</div>
 				<div class="top-grid last-topgrid">
 					<a href="#"><img src="images/icon3.png" title="icon-name"></a>

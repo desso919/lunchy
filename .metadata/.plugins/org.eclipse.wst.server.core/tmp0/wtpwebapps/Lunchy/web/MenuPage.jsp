@@ -22,10 +22,12 @@
 	<div class="header">
 		<div class="wrap">
 			<div class="top-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				<div style="float: left; color: white; padding: 10px 15px;">
+					<p
+						style="font-size: 35px; font-style: oblique; font-weight: bold; color: darkgoldenrod;">Lunchy.
+						Make your life tasty.</p>
 				</div>
-					<div style="float: right;">
+				<div style="float: right;">
 					<form method="post" action="/Lunchy/LogoutServlet">
 						<input type="submit" class="mybutton" value="Log out">
 					</form>
@@ -33,9 +35,10 @@
 
 				<div style="float: right; color: wheat; padding: 10px 15px;">
 					<h2>
-						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+						Welcome,
+						<%=SessionUtil.getLoggedInUser(request).getFullName()%>
 					</h2>
-				</div>	
+				</div>
 				<div class="clear"></div>
 			</div>
 			<!---start-top-nav---->
@@ -48,22 +51,22 @@
 
 							if (userAccountType == AccountType.ADMINISTRATOR) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
-						<li><a href="MenuPage.jsp">Menu</a></li>
-						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
-						<li><a href="AddNewUserPage.jsp">Add New User</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
+						<li class="active"><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="AddUserPage.jsp">Add New User</a></li>
 						<%
 							} else if (userAccountType == AccountType.RESTAURANT_WORKER) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
-						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
+						<li class="active"><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="AddMenuPage.jsp">Add New Menu</a></li>
 						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
 						<li><a href="ShowAllOrders.jsp">Show Orders</a></li>
 						<%
 							} else if (userAccountType == AccountType.CLIENT) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
-						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
+						<li class="active"><a href="MenuPage.jsp">Menu</a></li>
 						<li><a href="MyOrdersPage.jsp">My Orders</a></li>
 						<%
 							}
@@ -111,6 +114,10 @@
 					<p>
 						Ingredients:
 						<%=meal.getIngredients()%></p>
+
+					<%
+						if (userAccountType == AccountType.CLIENT) {
+					%>
 					<div class="gallery-button">
 						<form method="post" action="/Lunchy/AddOrderToSessionServlet">
 							<input type="hidden" name="mealId" value="<%=meal.getMealId()%>">
@@ -119,6 +126,10 @@
 							<span><input type="submit" class="mybutton" value="Order"></span>
 						</form>
 					</div>
+					<br></br>
+					<%
+						}
+					%>
 				</div>
 				<%
 					}

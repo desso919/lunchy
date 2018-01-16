@@ -54,10 +54,12 @@
 	<div class="header">
 		<div class="wrap">
 			<div class="top-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				<div style="float: left; color: white; padding: 10px 15px;">
+					<p
+						style="font-size: 35px; font-style: oblique; font-weight: bold; color: darkgoldenrod;">Lunchy.
+						Make your life tasty.</p>
 				</div>
-					<div style="float: right;">
+				<div style="float: right;">
 					<form method="post" action="/Lunchy/LogoutServlet">
 						<input type="submit" class="mybutton" value="Log out">
 					</form>
@@ -65,7 +67,8 @@
 
 				<div style="float: right; color: wheat; padding: 10px 15px;">
 					<h2>
-						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+						Welcome,
+						<%=SessionUtil.getLoggedInUser(request).getFullName()%>
 					</h2>
 				</div>
 				<div class="clear"></div>
@@ -87,14 +90,16 @@
 						<%
 							} else if (userAccountType == AccountType.RESTAURANT_WORKER) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="AddMenuPage.jsp">Add New Menu</a></li>
 						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
-						<li><a href="ShowAllOrders.jsp">Show Orders</a></li>
+						<li class="active"><a href="ShowAllOrders.jsp">Show
+								Orders</a></li>
 						<%
 							} else if (userAccountType == AccountType.CLIENT) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
 						<li><a href="MyOrdersPage.jsp">My Orders</a></li>
 						<%
@@ -114,7 +119,7 @@
 			<table id="orders">
 				<tr>
 					<th>Order Id</th>
-					<th>User</th>
+					<th>Client</th>
 					<th>Meal</th>
 					<th>Price</th>
 					<th>Order Status</th>
@@ -126,31 +131,30 @@
 					SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
 
 					for (Order order : OrderDaoImpl.getAllOrders()) {
-						Meal meal = MealDaoImpl.getMeal(order.getMealId());
+						String orderStatus = order.getOrderStatus();
+
+						if (!orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
+							Meal meal = MealDaoImpl.getMeal(order.getMealId());
 				%>
 				<tr>
 					<td><%=order.getOrderId()%></td>
-					<td><%=UserDaoImpl.getUserById(order.getUserId()).getUsername()%></td>
+					<td><%=UserDaoImpl.getUserById(order.getUserId()).getFullName()%></td>
 					<td><%=meal.getMealName()%></td>
 					<td><%=meal.getPrice() + " " + Util.APPLICATION_CURRENCY%></td>
 					<%
 						String statusColor = "black";
-							String orderStatus = order.getOrderStatus();
-							String orderStatusToShow = null;
+								String orderStatusToShow = null;
 
-							if (orderStatus.equalsIgnoreCase(OrderStatus.PENDING.toString())) {
-								statusColor = "red";
-								orderStatusToShow = "NOT PURCHASED";
-							} else if (orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
-								statusColor = "green";
-								orderStatusToShow = OrderStatus.READY.toString();
-							} else if (orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
-								statusColor = "yellow";
-								orderStatusToShow = "ORDER IS ACCEPTED";
-							} else if (orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
-								statusColor = "orange";
-								orderStatusToShow = OrderStatus.COOKING.toString();
-							}
+								if (orderStatus.equalsIgnoreCase(OrderStatus.PENDING.toString())) {
+									statusColor = "red";
+									orderStatusToShow = "NOT PURCHASED";
+								} else if (orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
+									statusColor = "green";
+									orderStatusToShow = "ORDER IS ACCEPTED";
+								} else if (orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
+									statusColor = "orange";
+									orderStatusToShow = OrderStatus.COOKING.toString();
+								}
 					%>
 					<td style="color: <%=statusColor%>; font-size: 16px;"><%=orderStatusToShow%></td>
 					<%
@@ -192,13 +196,15 @@
 				</tr>
 				<%
 					}
+					}
 				%>
 
 			</table>
 		</div>
 	</div>
 
-	<div class="copy-right" style="position: absolute; width:100%; bottom:35px">
+	<div class="copy-right"
+		style="position: absolute; width: 100%; bottom: 35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
 			<div class="clear"></div>

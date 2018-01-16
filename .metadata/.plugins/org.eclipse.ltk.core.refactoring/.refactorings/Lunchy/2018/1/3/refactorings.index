@@ -28,3 +28,4 @@
 1516054680879	Rename local variable 'lastname'
 1516054697261	Rename method 'getLastname'
 1516054702089	Rename method 'setLastname'
+1516130769471	Extract method 'addMealToMenuMealsTable'

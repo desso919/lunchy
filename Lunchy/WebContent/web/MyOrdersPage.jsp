@@ -59,10 +59,12 @@
 	<div class="header">
 		<div class="wrap">
 			<div class="top-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				<div style="float: left; color: white; padding: 10px 15px;">
+					<p
+						style="font-size: 35px; font-style: oblique; font-weight: bold; color: darkgoldenrod;">Lunchy.
+						Make your life tasty.</p>
 				</div>
-					<div style="float: right;">
+				<div style="float: right;">
 					<form method="post" action="/Lunchy/LogoutServlet">
 						<input type="submit" class="mybutton" value="Log out">
 					</form>
@@ -70,7 +72,8 @@
 
 				<div style="float: right; color: wheat; padding: 10px 15px;">
 					<h2>
-						Welcome, <%=SessionUtil.getLoggedInUser(request).getFullName()%>
+						Welcome,
+						<%=SessionUtil.getLoggedInUser(request).getFullName()%>
 					</h2>
 				</div>
 				<div class="clear"></div>
@@ -85,23 +88,24 @@
 
 							if (userAccountType == AccountType.ADMINISTRATOR) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
 						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
 						<li><a href="AddNewUserPage.jsp">Add New User</a></li>
 						<%
 							} else if (userAccountType == AccountType.RESTAURANT_WORKER) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
+						<li><a href="AddMenuPage.jsp">Add New Menu</a></li>
 						<li><a href="AddNewMealPage.jsp">Add New Meal</a></li>
-						<li><a href="ShowAllOrders.jsp">Show Orders</a></li>
+						<li class="active"><a href="ShowAllOrders.jsp">Show Orders</a></li>
 						<%
 							} else if (userAccountType == AccountType.CLIENT) {
 						%>
-						<li class="active"><a href="HomePage.jsp">Home</a></li>
+						<li><a href="HomePage.jsp">Home</a></li>
 						<li><a href="MenuPage.jsp">Menu</a></li>
-						<li><a href="MyOrdersPage.jsp">My Orders</a></li>
+						<li class="active"><a href="MyOrdersPage.jsp">My Orders</a></li>
 						<%
 							}
 						%>
@@ -153,13 +157,13 @@
 							statusColor = "red";
 							orderStatusToShow = "NOT PURCHASED";
 						} else if (orderStatus.equalsIgnoreCase(OrderStatus.READY.toString())) {
-							statusColor = "green";
+							statusColor = "orange";
 							orderStatusToShow = OrderStatus.READY.toString();
 						} else if (orderStatus.equalsIgnoreCase(OrderStatus.ACCEPTED.toString())) {
-							statusColor = "yellow";
+							statusColor = "blue";
 							orderStatusToShow = "ORDER IS ACCEPTED";
 						} else if (orderStatus.equalsIgnoreCase(OrderStatus.COOKING.toString())) {
-							statusColor = "orange";
+							statusColor = "black";
 							orderStatusToShow = OrderStatus.COOKING.toString();
 						}
 				%>
@@ -225,7 +229,8 @@
 		</div>
 	</div>
 
-	<div class="copy-right" style="position: absolute; width:100%; bottom:35px">
+	<div class="copy-right"
+		style="position: absolute; width: 100%; bottom: 35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
 			<div class="clear"></div>

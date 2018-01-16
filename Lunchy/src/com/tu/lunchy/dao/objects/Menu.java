@@ -12,6 +12,10 @@ public class Menu {
 	public Menu() {
 	}
 
+	public Menu(String menuName) {
+		this.menuName = menuName;
+	}
+	
 	public Menu(String menuName, List<Meal> mealsForThisMenu) {
 		this.menuName = menuName;
 		this.mealsForThisMenu = mealsForThisMenu;
