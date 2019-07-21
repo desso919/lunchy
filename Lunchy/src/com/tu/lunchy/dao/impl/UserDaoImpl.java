@@ -2,7 +2,10 @@ package com.tu.lunchy.dao.impl;
 
 import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.database.DatabaseConnection;
+import com.tu.lunchy.util.Constants;
+import com.tu.lunchy.util.StoredProcedureResult;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -92,26 +95,31 @@ public class UserDaoImpl {
 	
 
 	public static boolean addUser(User user) {
-		Connection connection = DatabaseConnection.getConnection();
-		String sqlQuery = "INSERT INTO users (username, password, first_name, last_name, account_type_id) VALUES (?, ?, ?, ?, ?)";
-		int result = 0;
+		Connection connection = DatabaseConnection.getConnection();		
+		String sql = "CALL add_new_user(?,?,?,?,?,?,?)";
 
 		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-			preparedStatement.setString(1, user.getUsername());
-			preparedStatement.setString(2, user.getPassword());
-			preparedStatement.setString(3, user.getFirstName());
-			preparedStatement.setString(4, user.getLastName());
-			preparedStatement.setInt(5, user.getAccountType());
-			result = preparedStatement.executeUpdate();
+			CallableStatement callableStatement = connection.prepareCall(sql);
+			callableStatement.setString(1, user.getUsername());
+			callableStatement.setString(2, user.getPassword());
+			callableStatement.setString(3, user.getFirstName());
+			callableStatement.setString(4, user.getLastName());
+			callableStatement.setInt(5, user.getAccountType());
+			callableStatement.registerOutParameter(6, java.sql.Types.INTEGER);
+			callableStatement.registerOutParameter(7, java.sql.Types.VARCHAR);
+
+			callableStatement.execute();
+			
+			int resultCode = callableStatement.getInt(6);
+			String resultMessage = callableStatement.getString(7);
+			StoredProcedureResult storedProcedureResult = new StoredProcedureResult(resultCode, resultMessage);
+			
+			if (storedProcedureResult.isSuccessful()) {
+				return true;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-		if (result > 0) {
-			return true;
-		}
-
 		return false;
 	}
 }

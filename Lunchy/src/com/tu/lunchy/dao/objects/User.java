@@ -1,4 +1,4 @@
-package com.tu.lunchy.dao.objects;
+ package com.tu.lunchy.dao.objects;
 
 public class User {
 
@@ -27,6 +27,14 @@ public class User {
 
 	public User(int userId, String firstName, String lastName, String username, String password, int accountTypeId) {
 		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.password = password;
+		this.accountTypeId = accountTypeId;
+	}
+	
+	public User(String firstName, String lastName, String username, String password, int accountTypeId) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;

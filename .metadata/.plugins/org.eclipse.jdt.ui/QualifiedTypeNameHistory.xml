@@ -8,5 +8,8 @@
 <fullyQualifiedTypeName name="com.tu.lunchy.servlets.AddOrederServlet"/>
 <fullyQualifiedTypeName name="com.tu.lunchy.util.OrderStatus"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+<fullyQualifiedTypeName name="com.tu.lunchy.util.Constants"/>
 <fullyQualifiedTypeName name="com.tu.lunchy.dao.objects.User"/>
+<fullyQualifiedTypeName name="com.tu.lunchy.dao.impl.UserDaoImpl"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,5 @@
+1539545207237	Rename local variable 'preparedStatement'
+1539551387490	Rename local variable 'selectQuery'
+1539551450487	Rename local variable 'preparedStatement'
+1539639008197	Rename local variable 'callableStatement'
+1539720580252	Extract constant 'ERROR_MESSAGE_PREFIX'

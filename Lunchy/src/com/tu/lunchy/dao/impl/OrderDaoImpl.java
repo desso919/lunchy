@@ -1,5 +1,6 @@
 package com.tu.lunchy.dao.impl;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +13,8 @@ import java.util.List;
 import com.tu.lunchy.dao.objects.Order;
 import com.tu.lunchy.dao.objects.User;
 import com.tu.lunchy.database.DatabaseConnection;
+import com.tu.lunchy.util.Constants;
+import com.tu.lunchy.util.StoredProcedureResult;
 import com.tu.lunchy.util.Util;
 
 public class OrderDaoImpl {
@@ -83,32 +86,33 @@ public class OrderDaoImpl {
 	public static boolean addOrder(Order order) {
 		Connection connection = DatabaseConnection.getConnection();
 
-		String selectQuery = "INSERT INTO orders (user_id, menu_id, meal_id, order_status, is_oredred_for_office, order_time, order_for_time) VALUES (?, ?, ?, ?, ?, ?, ?)";
-		int result = 0;
+		String sql = "CALL lunchy_db.add_new_order(?,?,?,?,?,?,?,?,?)";
 
 		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
-			preparedStatement.setInt(1, order.getUserId());
-			preparedStatement.setInt(2, order.getMenuId());
-			preparedStatement.setInt(3, order.getMealId());
-			preparedStatement.setString(4, ORDER_STATUS_ACCEPTED);
-			preparedStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
-			preparedStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));		
-			preparedStatement.setTimestamp(7, order.getOrederedForTime());		
+			CallableStatement callableStatement = connection.prepareCall(sql);
+			
+			callableStatement.setInt(1, order.getUserId());
+			callableStatement.setInt(2, order.getMenuId());
+			callableStatement.setInt(3, order.getMealId());
+			callableStatement.setString(4, ORDER_STATUS_ACCEPTED);
+			callableStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
+			callableStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));
+			callableStatement.setTimestamp(7, order.getOrederedForTime());
+			callableStatement.registerOutParameter(8, java.sql.Types.INTEGER);
+			callableStatement.registerOutParameter(9, java.sql.Types.VARCHAR);
 
-			result = preparedStatement.executeUpdate();
+			callableStatement.execute();
+					
+			int resultCode = callableStatement.getInt(8);
+			String resultMessage = callableStatement.getString(9);
+			StoredProcedureResult storedProcedureResult = new StoredProcedureResult(resultCode, resultMessage);
+			
+			if (storedProcedureResult.isSuccessful()) {
+				return true;
+			}			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-		if (result > 0) {
-			return true;
-		}
-
 		return false;
 	}
-
-
-
-
 }

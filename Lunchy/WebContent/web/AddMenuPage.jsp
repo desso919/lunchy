@@ -89,7 +89,7 @@
 							action="/Lunchy/AddMenuServlet">
 							<div>
 								<span><label>Menu name</label></span> <span><input
-									name="mealName" type="text" class="textbox"></span>
+									name="menuName" type="text" class="textbox"></span>
 							</div>
 							<div class="clear"></div>
 							<div>

@@ -273,6 +273,7 @@ select#soflow-color {
 			document.getElementById("addNewMealForm").reset();
 		}
 	</script>
+	<!---End-footer
 	<div class="copy-right"
 		style="position: absolute; width: 100%; bottom: 35px">
 		<div class="top-to-page">
@@ -281,6 +282,6 @@ select#soflow-color {
 		</div>
 		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
 	</div>
-	<!---End-footer---->
+	---->
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.tu.lunchy.dao.impl;
 
 import java.math.BigDecimal;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +9,8 @@ import java.sql.SQLException;
 
 import com.tu.lunchy.dao.objects.Meal;
 import com.tu.lunchy.database.DatabaseConnection;
+import com.tu.lunchy.util.Constants;
+import com.tu.lunchy.util.StoredProcedureResult;
 
 public class MealDaoImpl {
 
@@ -57,52 +60,83 @@ public class MealDaoImpl {
 
 		return mealId;
 	}
-
-	public static boolean addMeal(Meal meal) {
+//
+//	public static boolean addMeal(Meal meal) {
+//		Connection connection = DatabaseConnection.getConnection();
+//
+//		String sqlQuery = "INSERT INTO meals (meal_name, description, ingredients, price) VALUES (?, ?, ?, ?)";
+//		int result = 0;
+//
+//		try {
+//			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+//			preparedStatement.setString(1, meal.getMealName());
+//			preparedStatement.setString(2, meal.getDescription());
+//			preparedStatement.setString(3, meal.getIngredients());
+//			preparedStatement.setBigDecimal(4, BigDecimal.valueOf(meal.getPrice()));
+//			result = preparedStatement.executeUpdate();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//
+//		if (result > 0) {
+//			return true;
+//		}
+//
+//		return false;
+//	}
+	
+	public static boolean addMeal(Meal meal, String menuName) {
 		Connection connection = DatabaseConnection.getConnection();
-
-		String sqlQuery = "INSERT INTO meals (meal_name, description, ingredients, price) VALUES (?, ?, ?, ?)";
-		int result = 0;
+		String sql = "CALL add_new_meal(?,?,?,?,?,?,?)";
 
 		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-			preparedStatement.setString(1, meal.getMealName());
-			preparedStatement.setString(2, meal.getDescription());
-			preparedStatement.setString(3, meal.getIngredients());
-			preparedStatement.setBigDecimal(4, BigDecimal.valueOf(meal.getPrice()));
-			result = preparedStatement.executeUpdate();
+			CallableStatement callableStatement = connection.prepareCall(sql);
+			callableStatement.setString(1, meal.getMealName());
+			callableStatement.setString(2, menuName);
+			callableStatement.setString(3, meal.getDescription());
+			callableStatement.setString(4, meal.getIngredients());
+			callableStatement.setBigDecimal(5, BigDecimal.valueOf(meal.getPrice()));
+			callableStatement.registerOutParameter(6, java.sql.Types.INTEGER);
+			callableStatement.registerOutParameter(7, java.sql.Types.VARCHAR);
+
+
+			callableStatement.execute();
+
+			int resultCode = callableStatement.getInt(6);
+			String resultMessage = callableStatement.getString(7);
+			StoredProcedureResult storedProcedureResult = new StoredProcedureResult(resultCode, resultMessage);
+			
+			if (storedProcedureResult.isSuccessful()) {
+				return true;
+			}	
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-
-		if (result > 0) {
-			return true;
 		}
 
 		return false;
 	}
 	
-	public static boolean addMenuMeal(int menuId, int mealId) {
-		Connection connection = DatabaseConnection.getConnection();
-
-		String sqlQuery = "INSERT INTO menu_meals (menu_id, meal_id) VALUES (?, ?)";
-		int result = 0;
-
-		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-			preparedStatement.setInt(1, menuId);
-			preparedStatement.setInt(2, mealId);
-
-			result = preparedStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		if (result > 0) {
-			return true;
-		}
-
-		return false;
-	}
+//	public static boolean addMenuMeal(int menuId, int mealId) {
+//		Connection connection = DatabaseConnection.getConnection();
+//
+//		String sqlQuery = "INSERT INTO menu_meals (menu_id, meal_id) VALUES (?, ?)";
+//		int result = 0;
+//
+//		try {
+//			PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+//			preparedStatement.setInt(1, menuId);
+//			preparedStatement.setInt(2, mealId);
+//
+//			result = preparedStatement.executeUpdate();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//
+//		if (result > 0) {
+//			return true;
+//		}
+//
+//		return false;
+//	}
 
 }

@@ -203,7 +203,8 @@
 		</div>
 	</div>
 
-	<div class="copy-right"
+	<!--
+		<div class="copy-right"
 		style="position: absolute; width: 100%; bottom: 35px">
 		<div class="top-to-page">
 			<a href="#top" class="scroll"> </a>
@@ -212,5 +213,6 @@
 		<p>Lunchy. All Rights Reserved | Design by Desislav Hristov</p>
 	</div>
 	<!---End-footer---->
+	-->
 </body>
 </html>

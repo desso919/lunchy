@@ -21,36 +21,43 @@ import com.tu.lunchy.util.CheckUtil;
 @WebServlet("/AddMenuServlet")
 public class AddMenuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddMenuServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public AddMenuServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String mealName = request.getParameter("menuName");
 
-		if(mealName != null) {
+		if (mealName != null) {
 			boolean isAdded = MenuDaoImpl.addMenu(new Menu(mealName));
 
-			if (!isAdded) {
+			if (isAdded) {
+				response.sendRedirect("web/AddMenuPage.jsp");
+			} else {
 				PrintWriter out = response.getWriter();
 				out.println("<h1> Failed to add new menu</h1>");
 			}
+
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("<h1> Failed to add new menu. Menu name is not correct</h1>");

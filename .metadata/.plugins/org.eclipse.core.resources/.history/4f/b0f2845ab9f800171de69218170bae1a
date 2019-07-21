@@ -1,7 +1,0 @@
-package com.tu.lunchy.util;
-
-public enum UserType {
-
-	ADMINISTRATOR, RESTAURANT_WORKER, CLIENT, UNKNOWN;
-
-}

@@ -1,7 +1,0 @@
-package com.tu.lunchy.servlets;
-
-public enum UserType {
-	
-	CLIENT, ADMINISTRATOR, RESTAURANT_WORKER
-
-}

@@ -114,24 +114,21 @@
 				<div class="top-grid">
 					<a href="#"><img src="images/icon1.png" title="icon-name"></a>
 					<h3>Our Menu</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<p>Take a look at out menu and make your life tasty.
 					</p>
 					<a class="button" href="MenuPage.jsp">View</a>
 				</div>
 				<div class="top-grid">
 					<a href="#"><img src="images/icon2.png" title="icon-name"></a>
 					<h3>Order Online</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<p>Order online and order for the office and make your life even more tasty.
 					</p>
 					<a class="button" href="MyOrdersPage.jsp">Order now</a>
 				</div>
 				<div class="top-grid last-topgrid">
 					<a href="#"><img src="images/icon3.png" title="icon-name"></a>
 					<h3>Location</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<p>Find out more information about us.
 					</p>
 					<a class="button" href="AboutUs.jsp">Check us</a>
 				</div>

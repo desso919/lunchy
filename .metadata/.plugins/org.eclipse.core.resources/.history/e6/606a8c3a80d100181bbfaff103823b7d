@@ -1,0 +1,113 @@
+package com.tu.lunchy.dao.impl;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.tu.lunchy.dao.objects.Order;
+import com.tu.lunchy.dao.objects.User;
+import com.tu.lunchy.database.DatabaseConnection;
+import com.tu.lunchy.util.Constants;
+import com.tu.lunchy.util.Util;
+
+public class OrderDaoImpl {
+
+	private static final String ORDER_STATUS_ACCEPTED = "ACCEPTED";
+
+	public static List<Order> getAllOrders() {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Order> allOrders = new ArrayList<Order>();
+
+		String selectQuery = "select * from orders";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int orderId = resultSet.getInt("order_id");
+				int userId = resultSet.getInt("user_id");
+				int menuId = resultSet.getInt("menu_id");
+				int mealId = resultSet.getInt("meal_id");
+				String orderStatus = resultSet.getString("order_status");
+				int isOrderedForTheOffice = resultSet.getInt("is_oredred_for_office");
+				Timestamp orderTime = resultSet.getTimestamp("order_time");
+				Timestamp orderedForTime = resultSet.getTimestamp("order_for_time");
+
+				allOrders.add(new Order(orderId, userId, menuId, mealId, orderStatus,
+						Util.convertIntToBoolean(isOrderedForTheOffice), orderTime, orderedForTime));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return allOrders;
+	}
+	
+
+	public static List<Order> getAllOrdersForUser(User user) {
+		Connection connection = DatabaseConnection.getConnection();
+		List<Order> allOrders = new ArrayList<Order>();
+
+		String selectQuery = "select * from orders where user_id = ?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+			preparedStatement.setInt(1, user.getUserId());
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int orderId = resultSet.getInt("order_id");
+				int userId = resultSet.getInt("user_id");
+				int menuId = resultSet.getInt("menu_id");
+				int mealId = resultSet.getInt("meal_id");
+				String orderStatus = resultSet.getString("order_status");
+				int isOrderedForTheOffice = resultSet.getInt("is_oredred_for_office");
+				Timestamp orderTime = resultSet.getTimestamp("order_time");
+				Timestamp orderedForTime = resultSet.getTimestamp("order_for_time");
+
+				allOrders.add(new Order(orderId, userId, menuId, mealId, orderStatus,
+						Util.convertIntToBoolean(isOrderedForTheOffice), orderTime, orderedForTime));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return allOrders;
+	}
+
+	public static boolean addOrder(Order order) {
+		Connection connection = DatabaseConnection.getConnection();
+
+		String sql = "CALL lunchy_db.add_new_order(?,?,?,?,?,?,?,?)";
+
+		try {
+			CallableStatement callableStatement = connection.prepareCall(sql);
+			
+			callableStatement.setInt(1, order.getUserId());
+			callableStatement.setInt(2, order.getMenuId());
+			callableStatement.setInt(3, order.getMealId());
+			callableStatement.setString(4, ORDER_STATUS_ACCEPTED);
+			callableStatement.setInt(5, Util.convertBooleanToInt(order.isOrderedForTheOffice()));
+			callableStatement.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));
+			callableStatement.setTimestamp(7, order.getOrederedForTime());
+			callableStatement.registerOutParameter(8, java.sql.Types.VARCHAR);
+
+			callableStatement.execute();
+			
+			String result = callableStatement.getString(8);
+			if (result.equalsIgnoreCase(Constants.ADD_ORDER_SUCCESS_MESSAGE)) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+}
